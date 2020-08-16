@@ -1,0 +1,5 @@
+env
+celerybeat-schedule
+celerybeat.pid
+openwisp2.db
+.idea
