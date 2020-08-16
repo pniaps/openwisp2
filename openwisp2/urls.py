@@ -20,8 +20,11 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
 # ]
 
-from django.contrib import admin
+from django.conf import settings
 from django.conf.urls import include, url
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import reverse_lazy
 from django.views.generic import RedirectView
 
@@ -49,3 +52,6 @@ urlpatterns = [
     url(r'', include('openwisp_monitoring.urls')),
     url(r'', include('openwisp_notifications.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

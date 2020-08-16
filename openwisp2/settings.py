@@ -136,6 +136,8 @@ USE_L10N = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '{0}./media/'.format(BASE_DIR)
 
 TEMPLATES = [
     {
