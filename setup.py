@@ -8,5 +8,6 @@ setup(
     license='',
     author='Pedro Peña',
     author_email='pedro@makedit.com',
-    description='Makedit Openwisp2'
+    description='Makedit Openwisp2',
+    include_package_data=True,
 )
